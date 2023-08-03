@@ -9,7 +9,7 @@ resources:
 - repo: self
 
 variables:
-  imageRepo: sampleapp
+  imageRepo: deorepooja1/netcore12:latest
   tag: '$(Build.BuildId)'
 
 stages:
