@@ -32,4 +32,15 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'deore97sub(e2d663cc-70d4-47ec-91f6-587c56c7eafd)'
+    azureContainerRegistry: '{"loginServer":"kubedevopconreg.azurecr.io", "id" : "/subscriptions/e2d663cc-70d4-47ec-91f6-587c56c7eafd/resourceGroups/KubeDevoptest/providers/Microsoft.ContainerRegistry/registries/kubedevopconreg"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Build services'
+
+
+
+
 
